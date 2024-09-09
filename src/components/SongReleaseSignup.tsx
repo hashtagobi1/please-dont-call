@@ -28,7 +28,7 @@ export default function SongReleaseSignup() {
   return (
     <div className="max-w-md mx-auto p-8 bg-background border-black  border rounded-lg shadow-lg">
       <h2 className="text-xl font-bold mb-4 text-center text-black">
-        Stay Updated on Our Latest Release
+        Sign up for the release
       </h2>
       {!submitted ? (
         <form onSubmit={handleSubmit} className="space-y-4">
