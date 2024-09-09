@@ -3,17 +3,14 @@
 import { useRef } from "react";
 
 export default function AudioPlayer() {
-  // Create a reference to the audio element
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Function to play the audio
   const playAudio = () => {
     if (audioRef.current) {
       audioRef.current.play();
     }
   };
 
-  // Function to pause the audio
   const pauseAudio = () => {
     if (audioRef.current) {
       audioRef.current.pause();
