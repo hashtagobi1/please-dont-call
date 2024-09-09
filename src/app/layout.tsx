@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { VT323 } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// Define the VT323 font imported from Google Fonts
+const VT_Font = VT323({
+  weight: "400", // VT323 has a single weight
+  variable: "--font-vt323",
+  subsets: ["latin"], // Include Latin subset for basic characters
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+// Define the local Nokia Cellphone FC font
+const nokiaFont = localFont({
+  src: "./fonts/nokiafc22.ttf", // Path to your local font file
+  variable: "--font-nokia",
+  weight: "400", // Define font weight
 });
 
 export const metadata: Metadata = {
@@ -25,9 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${VT_Font.variable} ${nokiaFont.variable} antialiased`}>
         {children}
       </body>
     </html>
