@@ -1,32 +1,37 @@
 "use client";
 
-import { useRef } from "react";
+import { Pause, Play, Volume2 } from "lucide-react";
+import { useRef, useState } from "react";
 
 export default function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const playAudio = () => {
+  const toggleAudio = () => {
     if (audioRef.current) {
-      audioRef.current.play();
-    }
-  };
-
-  const pauseAudio = () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
     }
   };
 
   return (
-    <div className="audio-player text-center mt-10 flex items-center justify-center flex-col">
-      <h2>Preview Song</h2>
+    <div className="audio-player text-center mt-20 flex items-center justify-center flex-col">
+      <div className="flex gap-2 mb-4">
+        <h2>Preview Song</h2>
+        <Volume2 />
+      </div>
       <audio ref={audioRef} src="./audio/Snippet.mp3" preload="auto" />
       <div className="flex space-x-4">
-        <button onClick={playAudio} className="bg-green-500 p-2 rounded">
-          Play
-        </button>
-        <button onClick={pauseAudio} className="bg-red-500 p-2 rounded">
-          Pause
+        <button
+          onClick={toggleAudio}
+          className={`p-2 rounded ${isPlaying ? "bg-red-500" : "bg-green-500"}`}
+          aria-label={isPlaying ? "Pause" : "Play"}
+        >
+          {isPlaying ? <Pause /> : <Play />}
         </button>
       </div>
     </div>
