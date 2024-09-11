@@ -29,6 +29,7 @@ export default function SongReleaseSignup() {
       const { msg, result } = data;
       // do something with response
       // alert(msg);
+      console.log({ msg, result });
     });
     console.log("Submitted:", { name, email });
     setSubmitted(true);
