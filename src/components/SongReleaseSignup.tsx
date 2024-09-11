@@ -95,10 +95,10 @@ export default function SongReleaseSignup() {
           <div className="mt-10 text-center animate-pulse">
             <a
               className="underline gap-4 flex items-center justify-center"
-              href="tel:+441234567890"
+              href="tel:+447716483233"
             >
               <Phone />
-              +44 123 456 7890
+              +44 7716 483233
             </a>
           </div>
         </>
