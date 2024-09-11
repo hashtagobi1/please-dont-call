@@ -95,7 +95,7 @@ export default function SongReleaseSignup() {
           <SuccessMsg />
           <div className="mt-10 text-center animate-pulse">
             <a
-              className="underline gap-4 flex items-center justify-center"
+              className="underline text-black gap-4 flex items-center justify-center"
               href="tel:+447716483233"
             >
               <Phone />
