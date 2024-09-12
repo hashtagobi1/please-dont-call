@@ -4,6 +4,7 @@ import "./globals.css";
 import { VT323 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Define the VT323 font imported from Google Fonts
 const VT_Font = VT323({
@@ -54,6 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {children}
         <Analytics />
+        <GoogleAnalytics gaId="G-REWBDTCCST" />
       </body>
     </html>
   );
