@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Script
+      {/* <Script
         id="gtm"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -42,17 +42,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NWTMDQMD');`,
         }}
-      ></Script>
+      ></Script> */}
 
       <body className={`${VT_Font.variable} ${nokiaFont.variable} antialiased`}>
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NWTMDQMD"
             height="0"
             width="0"
             style="display:none;visibility:hidden"
           ></iframe>
-        </noscript>
+        </noscript> */}
         {children}
         <Analytics />
         <GoogleAnalytics gaId="G-REWBDTCCST" />
