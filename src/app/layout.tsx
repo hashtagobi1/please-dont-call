@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { VT323 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 // Define the VT323 font imported from Google Fonts
 const VT_Font = VT323({
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${VT_Font.variable} ${nokiaFont.variable} antialiased`}>
         {children}
+        <Analytics/>
       </body>
     </html>
   );
