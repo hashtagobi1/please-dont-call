@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { VT323 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
+// import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Define the VT323 font imported from Google Fonts
