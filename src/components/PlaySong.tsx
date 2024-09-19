@@ -1,6 +1,6 @@
 "use client";
 
-import { Pause, Play, Volume2 } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 import { useRef, useState } from "react";
 
 export default function AudioPlayer() {
@@ -19,10 +19,8 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="audio-player text-center mt-20 flex items-center justify-center flex-col">
+    <div className="p-6 text-center mb-10 flex items-center justify-center flex-col">
       <div className="flex gap-2 mb-4">
-        <h2>Preview Song</h2>
-        <Volume2 />
       </div>
       <audio ref={audioRef} src="./audio/Snippet.mp3" preload="auto" />
       <div className="flex space-x-4">
