@@ -1,5 +1,6 @@
 import SongReleaseSignup from "@/components/SongReleaseSignup";
 import PlaySong from "@/components/PlaySong";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
       </div>
 
       <SongReleaseSignup />
-
       <PlaySong />
+      <Footer />
     </div>
   );
 }
