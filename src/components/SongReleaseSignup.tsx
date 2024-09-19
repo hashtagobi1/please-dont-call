@@ -51,7 +51,7 @@ export default function SongReleaseSignup() {
               <Input
                 id="name"
                 type="text"
-                placeholder="Enter your name"
+                placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -72,14 +72,14 @@ export default function SongReleaseSignup() {
               <Input
                 id="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder="example@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
             <Button type="submit" className="w-full">
-              Keep Me Updated
+              Keep Me Updated!
             </Button>
             {error && (
               <Alert variant="destructive">
