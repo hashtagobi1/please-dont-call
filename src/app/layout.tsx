@@ -18,7 +18,7 @@ const nokiaFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "UK Number One",
+  title: "#1 Song in the UK",
   description: "produced by obi",
 };
 
